@@ -1,10 +1,8 @@
-/*
-  specify which libraries to load: 
-    In the Governance Tier configuration file, 
-    these should be configurations common across 
-    all apps governed by this config. 
-*/
-libraries{
-  merge = true 
-  sonarqube
-}
+|- gradle/
+  \-- build.groovy
+  \-- unit_test.groovy
+|- maven/
+  \-- build.groovy
+  \-- unit_test.groovy
+|- sonarqube/
+  \-- static_code_analysis.groovy
