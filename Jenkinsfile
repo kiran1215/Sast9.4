@@ -1,8 +1,4 @@
-static_code_analysis()
-build()
-on_merge to: develop, {
-  deploy_to dev
-}
-on_merge to: master, {
-  deploy_to prod
-}
+#!/usr/bin/env groovy
+
+/* `buildPlugin` step provided by: https://github.com/jenkins-infra/pipeline-library */
+buildPlugin()
