@@ -1,24 +1,10 @@
+/*
+  specify which libraries to load: 
+    In the Governance Tier configuration file, 
+    these should be configurations common across 
+    all apps governed by this config. 
+*/
 libraries{
-  github_enterprise
+  merge = true 
   sonarqube
-  docker{
-    registry = "docker-registry.default.svc:5000"
-    cred = "openshift-docker-registry"
-    repo_path_prefix = "my-app-images"
-  }
-  sdp{
-    images{
-      registry = "https://docker-registry.default.svc:5000"
-      repo = "sdp"
-      cred = "openshift-docker-registry"
-    }
-  }
-  openshift{
-    // More on these settings in the next section
-    url = "https://my-openshift-cluster.ocp.example.com:8443"
-    helm_configuration_repository = "https://github.com/kottoson-bah/sdp-example-helm-config.git"
-    helm_configuration_repository_credential = github
-    tiller_namespace = my-app-tiller
-    tiller_credential = my-app-tiller-credential
-  }
 }
