@@ -7,7 +7,7 @@ import hudson.*
 import hudson.model.*
 
 def ipAddress
-def vmName = 'Sast-pi-dev-' + BUILD_NUMBER
+def vmName = 'SAST-9.4-' + BUILD_NUMBER
 def installationLogsClean = "${vmName}_Build_${BUILD_NUMBER}_Installation"
 def installationFilePath = "C:\\CI-slave\\checkmarx\\installation\\"
 def DOMAIN_NAME = 'rnd.local'
